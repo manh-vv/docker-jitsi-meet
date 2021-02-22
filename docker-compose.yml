@@ -99,7 +99,7 @@ services:
             - XMPP_RECORDER_DOMAIN
             - TOKEN_AUTH_URL
         networks:
-            meet.jitsi:
+            video-meet.lecle.vn:
                 aliases:
                     - ${XMPP_DOMAIN}
 
@@ -168,7 +168,7 @@ services:
             - PUBLIC_URL
             - TZ
         networks:
-            meet.jitsi:
+            video-meet.lecle.vn:
                 aliases:
                     - ${XMPP_SERVER}
 
@@ -216,7 +216,7 @@ services:
         depends_on:
             - prosody
         networks:
-            meet.jitsi:
+            video-meet.lecle.vn:
 
     # Video bridge
     jvb:
@@ -248,10 +248,10 @@ services:
         depends_on:
             - prosody
         networks:
-            meet.jitsi:
+            video-meet.lecle.vn:
                 aliases:
-                    - jvb.meet.jitsi
+                    - jvb.video-meet.lecle.vn
 
 # Custom network so all services can communicate using a FQDN
 networks:
-    meet.jitsi:
+    video-meet.lecle.vn:

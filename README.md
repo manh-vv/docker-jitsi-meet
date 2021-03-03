@@ -17,3 +17,9 @@ The installation manual is available [here](https://jitsi.github.io/handbook/doc
 * Support container replicas (where applicable).
 * TURN server.
 
+## How to custom web UI
+
+* Clone [jitsi-web](https://github.com/jitsi/jitsi-meet)
+* Run *npm install* && *make* in *jitsi-web*
+* Modify `JITSI_WEB_PATH` in `.env` with your `jitsi-web` path
+* Run *compose-down* and *compose-up -d*

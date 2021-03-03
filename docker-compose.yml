@@ -11,6 +11,7 @@ services:
         volumes:
             - ${CONFIG}/web:/config:Z
             - ${CONFIG}/transcripts:/usr/share/jitsi-meet/transcripts:Z
+            - ${JITSI_WEB_PATH}/:/usr/share/jitsi-meet
         environment:
             - ENABLE_LETSENCRYPT
             - ENABLE_HTTP_REDIRECT
